@@ -19,7 +19,7 @@ Array.prototype.myCustomReduce = function (callBack, initialValue) {
 	}
 
 	for (; index < this.length; index++) {
-		total = callBack(parseInt(total), parseInt(this[index]), index, this);
+		total = callBack(total, this[index], index, this);
 	}
 
 	return total;
@@ -39,4 +39,16 @@ function customMap() {
 	const result = array.customMap((x, i) => x * 2);
 	console.log(result);
 	arrayValue.innerHTML = result;
+}
+
+function pipe(array_of_functions) {
+	return function (category) {
+		let result = category;
+		array_of_functions.forEach((_function) => {
+			let func = _function;
+			result = func(result);
+		});
+		console.log(result);
+		return result;
+	};
 }

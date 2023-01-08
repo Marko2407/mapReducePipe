@@ -4,12 +4,6 @@
         padding: 10px;
       }
 
-
-.card {
-  /* Add shadows to create the "card" effect */
-
-}
-
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
