@@ -38,6 +38,7 @@ function createClickListeners() {
 	});
 
 	closeMovieModal.addEventListener("click", () => {
+		yt_video.setAttribute("src", "");
 		movieModal.classList.remove("show");
 	});
 }
@@ -88,7 +89,7 @@ function openMovieModal(movie) {
 	const div = document.getElementById("movie_modal_div");
 	yt_video.setAttribute("src", `https://www.youtube.com/embed/${movie.url}`);
 	movie_title.innerHTML = movie.title;
-	movie_description.innerHTML = movie.description;
+	yt_video.movie_description.innerHTML = movie.description;
 	movieModal.classList.add("show");
 }
 
