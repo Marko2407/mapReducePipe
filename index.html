@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      .text { 
-        margin: auto;
-        width: 50%;
-        height: 100%;
+	<head>
+		<link rel="stylesheet" href="/stylesheet.css" />
 
-        text-align: center;
-        border: 3px solid green;
-        padding: 10px;
-      }
-    </style>
-  </head>
-  <body class="text">
-    <input type="text" id="textInput" /><br /><br /><br />
-    <button onclick="myFunction()">Button1</button>
-    <button onclick="myFunction()">Button2</button>
-    <button onclick="myFunction()">Button3</button>
-    <br /><br />Array Value:
-    <span id="arrayValue"></span>
-  </body>
+         <!--FA ICON -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+	</head>
+	<body class="text">
+		<input type="text" id="textInput" /><br /><br /><br />
+		<button id="map_btn">Map</button>
+		<button id="reduce_btn">Reduce</button>
+		<button id="pipe_btn">Pipe</button>
+		<br /><br />Array Values:
+		<span id="arrayValue"></span>
+		<div class="grid-container" id="new_div"></div>
+	</body>
+
+          <div class="modal-container" id="movie_modal_container">
+        <div class="modal" id="movie_modal_div">
+          <i
+            class="fa fa-close"
+            id="close_movie_modal"
+            style="font-size: 28px"
+          ></i>
+       
+            <div class="card">
+<div class="container">
+       <br/>
+    <iframe id="yt_video"  width="750" height="350" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <h2 id="movie_title"><b></b></h2>
+    <p id="movie_description"></p>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
 </html>
-
-<script>
-  let inputText = document.getElementById("textInput");
-  let arrayValue = document.getElementById("arrayValue");
-
-  function myFunction() {
-    let array = [];
-    array.push(inputText.value);
-    arrayValue.innerHTML = inputText.value;
-    inputText.value = "";
-  }
-</script>
+<script src="/constants.js"></script>
+<script src="/graphql.js"></script>
+<script src="/customFunctions.js"></script>
+<script src="/index.js"></script>

@@ -1,0 +1,88 @@
+.text { 
+        margin: auto;
+        text-align: center;
+        padding: 10px;
+      }
+
+
+.card {
+  /* Add shadows to create the "card" effect */
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  margin: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.25s ease;
+}
+
+.modal-container.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 50px 50px;
+  width: 850px;
+  height: 80%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.modal h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  position: relative;
+  top: -30px;
+}
+
+.modal input {
+  margin: 15px 0 15px 0;
+  width: 10rem;
+  height: 2rem;
+  border: 1px solid #b1aeae;
+  border-radius: 5px;
+}
+
+.modal textarea {
+  border: 1px solid #b1aeae;
+  border-radius: 5px;
+}
+
+.fa-close {
+  position: relative;
+  left: 380px;
+  transition: color 0.15s ease;
+}
+
+.fa-close:hover {
+  color: #2d9bf0;
+}
