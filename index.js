@@ -172,16 +172,4 @@ const titleCase = (st) => {
 		);
 };
 
-function pipe(array_of_functions) {
-	return function (category) {
-		let result = category;
-		array_of_functions.forEach((_function) => {
-			let func = _function;
-			result = func(result);
-		});
-		console.log(result);
-		return result;
-	};
-}
-
 init();
